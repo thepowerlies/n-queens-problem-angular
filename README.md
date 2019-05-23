@@ -1,4 +1,4 @@
-# N-Queen problem
+# N-Queen problem written in angular
 
 [Demo](https://ng-n-queens.thepowerlies.com)
 
