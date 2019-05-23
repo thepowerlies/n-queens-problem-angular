@@ -49,8 +49,8 @@ export class AppComponent {
     }
 
     // just to make share squares are not too small to see
-    if(this.count < 1 || this.count > 24){
-      alert("max count 24 and min count 1");
+    if(this.count < 4 || this.count > 24){
+      alert("max count 24 and min count 4");
       return;
     }
 
