@@ -1,0 +1,90 @@
+.container {
+  max-width: 900px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.board {
+  text-align: center;
+  //background-color: #bbada0;
+
+  .row {
+    display: flex;
+    justify-content: center;
+
+  }
+  .square {
+    border-radius: 4px;
+    flex: 1;
+    text-align: center;
+    max-width: 60px;
+    cursor: pointer;
+    margin: 2px;
+    //background: #f2e8de;
+    background: white;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+
+    .content {
+      padding-top: 100%;
+      position: relative;
+      width: 100%;
+      .num {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top:0;
+        left:0;
+        right:0;
+        bottom: 0;
+        text-align: center;
+        justify-content: center;
+
+      }
+    }
+    i {
+      font-size: 22px;
+      text-shadow: 0px 0px 12px black;
+      animation: popIn 0.8s;
+
+    }
+    .dot {
+      width: 18px;
+      height: 18px;
+      background-color: black;
+      border-radius: 50%;
+      animation: popIn 0.8s;
+      box-shadow: 0 0 2px black;
+    }
+  }
+
+  &.hide-dots .dot{
+    display: none;
+  }
+  //div.row:nth-of-type(odd){
+  //  div.square:nth-of-type(even){
+  //    background-color: #ededed;
+  //  }
+  //}
+  //div.row:nth-of-type(even){
+  //  div.square:nth-of-type(odd){
+  //    background-color: #ededed;
+  //  }
+  //}
+
+}
+
+
+@keyframes popIn {
+  0% { opacity: 0.2; transform: scale(0.6)}
+  50% {
+    opacity: 0.8;
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+}
